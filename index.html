@@ -1,0 +1,112 @@
+<html>
+    <head>
+<style>
+    header{
+        font-size:36px;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        background-color:rgb(228, 230, 245);
+    }
+    p{
+        font-size:24px;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    li{
+        font-size:26px;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    a{
+        font-size:20px;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    body{
+        background-color:rgb(241, 242, 248);
+    }
+    code{
+        color:red;
+    }
+    div.grid{
+        display:grid;
+        grid-template-columns:minmax(220px, auto) 1fr;
+        grid-template-areas:"navbar main";
+        grid-gap:50px;
+    }
+    nav#navbar{
+        grid-area:navbar;
+        position:fixed;
+        max-width:250px;
+    }
+    nav#navbar a{
+        display:block;
+        border:1px solid black;
+        padding:5px;
+        margin:5px 0;
+        text-decoration:none;
+        color:black;
+    }
+    main#main-doc{
+        grid-area:main;
+    }
+    @media screen and (max-width:750px) {
+        div.grid{
+            grid-template-columns:1fr;
+            grid-template-areas:"navbar" "main";
+        }
+
+        nav#navbar{
+            position:inherit;
+        }
+    }
+
+</style>
+    </head>
+    <body>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+        <div class="grid">
+    <nav id="navbar">
+<header>CSS Technical Documentation</header>
+<a href="#introduction_to_css" class="nav-link">Introduction to CSS</a>
+<a href="#fonts" class="nav-link">Fonts</a>
+<a href="#colors" class="nav-link">Colors</a>
+<a href="#media_query" class="nav-link">Media Query</a>
+<a href="#flexbox" class="nav-link">Flexbox</a>
+    </nav>
+        <main id="main-doc">
+            <section class="main-section" id="introduction_to_css">
+                <header>Introduction to CSS</header>
+                <p>CSS means Cascading Style Sheets and it describes how elements are displayed on screen.</p>
+                <p>CSS allows you to change the font, the background color, and other elements in a website.</p>
+            </section>
+            <section class="main-section" id="fonts">
+                <header>Fonts</header>
+                <p>In CSS you can modify the style of the font-related elements, including the size, weight, height and the variant.</p>
+                <p>CSS allows you to use custom types of fonts with font-family, and it is possible to add external fonts to a website.</p>
+            </section>
+            <section class="main-section" id="colors">
+                <header>Colors</header>
+                <p>You can change the color of fonts and background with CSS. There are different ways to change the color of the elements in a website.</p>
+                <ul>
+                    <li>The first way is using the name of the color, for example <code>"color:red"</code></li>
+                    <li>The second way is using the RGB (red, green, blue) color model, for example <code>"color:rgb(255, 0, 0)"</code></li>
+                    <li>The third way is using the Hex calculator, for example <code>"color:#ff000"</code></li>
+                    <li>CSS also allows you to change the opacity of the color using the RGBA color model, for example <code>"color:rgba(255, 0, 0, 1)"</code></li>
+                    <li>In the four examples, the color of the font is <code>red</code></li>
+                </ul>
+                
+            </section>
+            <section class="main-section" id="media_query">
+                <header>Media query</header>
+                <p>Media query is used to establish certain styles for different devices. A responsive website utilizes media query to give a better style sheet for tablets and mobile phones.</p>
+                <p>Media query also changes the style for printed documents and screen readers.</p>
+                <p>Another important detail about media query is the support of multitple browsers for both computers and mobile devices.</p>
+            </section>
+            <section class="main-section" id="flexbox">
+                <header>Flexbox</header>
+                <p>Flexbox is a tool that makes easier to create responsive structures for a website.</p>
+                <p>CSS uses this tool to give a sense of float and position to the website.</p>
+                <p>Each flexbox is created within a container, and utilizing other tools from CSS, they can be modified.</p>
+            </section>
+        </main>
+        </div>
+    </body>
+</html>
